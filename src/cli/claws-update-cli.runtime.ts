@@ -43,6 +43,7 @@ function logClawUpdatePlanSummary(plan: ClawUpdatePlan, runtime: RuntimeEnv): vo
   runtime.log(
     `Capability changes: ${plan.summary.capabilityChanges}; escalations requiring explicit review: ${plan.summary.capabilityEscalations}`,
   );
+  runtime.log(`Plan integrity: ${plan.planIntegrity}`);
   if (plan.summary.capabilityEscalations > 0) {
     runtime.log(
       "Capability consent: the exact plan-integrity token binds every ! change disclosed below.",
