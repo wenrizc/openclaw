@@ -40,10 +40,6 @@ import {
 
 const WHATSAPP_CHANNEL = "whatsapp" as const;
 
-export async function loadWhatsAppChannelRuntime() {
-  return await import("./channel.runtime.js");
-}
-
 async function loadWhatsAppSetupSurface() {
   return await import("./setup-surface.js");
 }

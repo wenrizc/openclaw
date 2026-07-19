@@ -71,6 +71,7 @@ Do not edit it by hand; run `pnpm docs:map:gen`.
   - H2: Payloads
   - H3: Agent-turn options
   - H3: Command payloads
+  - H3: Script payloads
   - H2: Execution styles
   - H2: Delivery and output
   - H3: Failure notifications
@@ -368,6 +369,7 @@ Do not edit it by hand; run `pnpm docs:map:gen`.
 - Route: /channels/feishu
 - Headings:
   - H2: Quick start
+  - H2: Inbound durability
   - H2: Access control
   - H3: Direct messages
   - H3: Group chats
@@ -424,6 +426,7 @@ Do not edit it by hand; run `pnpm docs:map:gen`.
   - H3: Option B: Reverse Proxy (Caddy)
   - H3: Option C: Cloudflare Tunnel
   - H2: How it works
+  - H3: Inbound durability
   - H2: Targets
   - H2: Config highlights
   - H2: Troubleshooting
@@ -517,6 +520,7 @@ Do not edit it by hand; run `pnpm docs:map:gen`.
 - Route: /channels/irc
 - Headings:
   - H2: Quick start
+  - H2: Inbound durability
   - H2: Connection settings
   - H2: Security defaults
   - H2: Access control
@@ -804,6 +808,7 @@ Do not edit it by hand; run `pnpm docs:map:gen`.
 - Headings:
   - H2: Install
   - H2: Setup
+  - H2: Inbound durability
   - H2: Configure
   - H3: Streaming
   - H3: Access policy
@@ -943,6 +948,7 @@ Do not edit it by hand; run `pnpm docs:map:gen`.
 - Headings:
   - H2: Install
   - H2: Quick setup
+  - H2: Inbound durability
   - H2: Environment variables
   - H2: DM policy and access control
   - H2: Outbound delivery
@@ -973,6 +979,7 @@ Do not edit it by hand; run `pnpm docs:map:gen`.
 - Headings:
   - H2: Bundled plugin
   - H2: Setup
+  - H2: Inbound durability
   - H2: Private/LAN ships
   - H2: Group channels
   - H2: Access control
@@ -1018,6 +1025,7 @@ Do not edit it by hand; run `pnpm docs:map:gen`.
   - H2: Install
   - H2: Quick setup
   - H2: What it is
+  - H2: Inbound durability
   - H2: Token refresh (optional)
   - H2: Multi-account support
   - H2: Access control
@@ -1336,6 +1344,7 @@ Do not edit it by hand; run `pnpm docs:map:gen`.
   - H1: openclaw channels
   - H2: Common commands
   - H2: Status / capabilities / resolve / logs
+  - H2: Inbound dead letters
   - H2: Add / remove accounts
   - H2: Login and logout (interactive)
   - H2: Troubleshooting
@@ -2458,6 +2467,7 @@ Do not edit it by hand; run `pnpm docs:map:gen`.
 - Route: /concepts/experimental-features
 - Headings:
   - H2: Currently documented flags
+  - H2: Control UI Labs
   - H2: Local model lean mode
   - H3: Why these tools
   - H3: When to turn it on
@@ -2940,6 +2950,7 @@ Do not edit it by hand; run `pnpm docs:map:gen`.
 - Headings:
   - H2: Available tools
   - H2: Listing and reading sessions
+  - H2: Managing session settings and groups
   - H2: Sessions versus conversations
   - H2: Sending cross-session messages
   - H2: Status and orchestration helpers
@@ -4110,6 +4121,7 @@ Do not edit it by hand; run `pnpm docs:map:gen`.
   - H2: How it works
   - H2: Configuration
   - H3: Configuration reference
+  - H2: Automatic device approval
   - H2: Control UI pairing behavior
   - H2: Operator scopes header
   - H2: TLS termination and HSTS
@@ -5955,6 +5967,19 @@ Do not edit it by hand; run `pnpm docs:map:gen`.
   - H2: Notes
   - H2: Related
 
+## plugins/meeting-plugins.md
+
+- Route: /plugins/meeting-plugins
+- Headings:
+  - H2: Choose a plugin
+  - H2: Choose a mode
+  - H2: Prepare Chrome and audio
+  - H2: Enable the plugin
+  - H2: Verify and join
+  - H2: Handle platform policy prompts
+  - H2: Discord voice chat
+  - H2: Platform guides
+
 ## plugins/memory-lancedb.md
 
 - Route: /plugins/memory-lancedb
@@ -7321,6 +7346,15 @@ Do not edit it by hand; run `pnpm docs:map:gen`.
   - H2: Surface
   - H2: Related docs
 
+## plugins/reference/zoom-meetings.md
+
+- Route: /plugins/reference/zoom-meetings
+- Headings:
+  - H1: Zoom meetings plugin
+  - H2: Distribution
+  - H2: Surface
+  - H2: Related docs
+
 ## plugins/sdk-agent-harness.md
 
 - Route: /plugins/sdk-agent-harness
@@ -7374,6 +7408,7 @@ Do not edit it by hand; run `pnpm docs:map:gen`.
 
 - Route: /plugins/sdk-channel-outbound
 - Headings:
+  - H2: Durable ingress monitors
   - H2: Adapter
   - H2: Plain-text sanitization
   - H2: Delivery Evidence
@@ -7551,6 +7586,7 @@ Do not edit it by hand; run `pnpm docs:map:gen`.
   - H2: Modes
   - H2: Guest join limits
   - H2: Tool and gateway surface
+  - H2: Related
 
 ## plugins/tool-plugins.md
 
@@ -7673,6 +7709,16 @@ Do not edit it by hand; run `pnpm docs:map:gen`.
   - H2: Config
   - H2: CLI
   - H2: Agent tool
+  - H2: Related
+
+## plugins/zoom-meetings.md
+
+- Route: /plugins/zoom-meetings
+- Headings:
+  - H2: Setup
+  - H2: Modes
+  - H2: Guest join limits
+  - H2: Tool and gateway surface
   - H2: Related
 
 ## prose.md
@@ -10163,6 +10209,14 @@ Do not edit it by hand; run `pnpm docs:map:gen`.
   - H2: How it works
   - H2: Channel behavior
   - H2: Reaction level
+  - H2: Related
+
+## tools/screen.md
+
+- Route: /tools/screen
+- Headings:
+  - H2: Actions
+  - H2: Routing and security
   - H2: Related
 
 ## tools/searxng-search.md

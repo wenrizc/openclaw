@@ -1614,6 +1614,7 @@ export async function startGatewayServer(
 
     const {
       execApprovalManager,
+      cancelRunBoundApprovals,
       forwardPluginApprovalRequest,
       pluginApprovalIosPushDelivery,
       pluginApprovalManager,
@@ -1896,6 +1897,7 @@ export async function startGatewayServer(
           resolveTerminalLaunchPolicy: terminalLaunchPolicy.resolve,
           isTerminalEnabled: terminalLaunchPolicy.isEnabled,
           execApprovalManager,
+          cancelRunBoundApprovals,
           forwardPluginApprovalRequest,
           pluginApprovalIosPushDelivery,
           pluginApprovalManager,
@@ -2244,6 +2246,12 @@ export async function startGatewayServer(
       minimalTestGateway,
       initialConfig: cfgAtStart,
       initialCompareConfig: startupLastGoodSnapshot.sourceConfig,
+      initialSnapshotRawHash: startupLastGoodSnapshot.exists
+        ? (startupLastGoodSnapshot.hash ?? null)
+        : null,
+      initialAuthoredConfig: startupLastGoodSnapshot.parsed,
+      initialSnapshotValid: startupLastGoodSnapshot.valid,
+      initialSnapshotIssues: startupLastGoodSnapshot.issues,
       initialInternalWriteHash: startupInternalWriteHash,
       watchPath: configSnapshot.path,
       readSnapshot: readConfigFileSnapshotForRuntimeTransaction,

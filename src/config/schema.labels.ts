@@ -157,6 +157,10 @@ export const FIELD_LABELS: Record<string, string> = {
   "gateway.auth.allowTailscale": "Gateway Auth Allow Tailscale Identity",
   "gateway.auth.rateLimit": "Gateway Auth Rate Limit",
   "gateway.auth.trustedProxy": "Gateway Trusted Proxy Auth",
+  "gateway.auth.trustedProxy.deviceAutoApprove": "Trusted Proxy Device Auto-Approval",
+  "gateway.auth.trustedProxy.deviceAutoApprove.enabled":
+    "Trusted Proxy Device Auto-Approval Enabled",
+  "gateway.auth.trustedProxy.deviceAutoApprove.scopes": "Trusted Proxy Device Auto-Approval Scopes",
   "gateway.trustedProxies": "Gateway Trusted Proxy CIDRs",
   "gateway.allowRealIpFallback": "Gateway Allow x-real-ip Fallback",
   "gateway.tools": "Gateway Tool Exposure Policy",
@@ -730,6 +734,7 @@ export const FIELD_LABELS: Record<string, string> = {
   "agents.defaults.compaction": "Compaction",
   "agents.defaults.compaction.mode": "Compaction Mode",
   "agents.defaults.compaction.provider": "Compaction Provider",
+  "agents.defaults.compaction.thinkingLevel": "Compaction Thinking Level",
   "agents.defaults.compaction.reserveTokens": "Compaction Reserve Tokens",
   "agents.defaults.compaction.keepRecentTokens": "Compaction Keep Recent Tokens",
   "agents.defaults.compaction.reserveTokensFloor": "Compaction Reserve Token Floor",
