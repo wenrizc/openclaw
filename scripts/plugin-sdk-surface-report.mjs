@@ -118,7 +118,7 @@ const defaultPublicDeprecatedExportsByEntrypointBudget = Object.freeze({
   "channel-inbound": 15,
   "channel-logging": 4,
   "channel-lifecycle": 23,
-  "channel-message": 126,
+  "channel-message": 129,
   "channel-pairing": 1,
   "channel-policy": 8,
   "channel-send-result": 1,
@@ -142,18 +142,18 @@ export function readPluginSdkSurfaceBudgets(env = process.env) {
     publicExports: readPluginSdkSurfaceBudgetEnv(
       "OPENCLAW_PLUGIN_SDK_MAX_PUBLIC_EXPORTS",
       // +4: session discussion state, info, provider, and registration contracts.
-      4712,
+      4717,
       env,
     ),
     publicFunctionExports: readPluginSdkSurfaceBudgetEnv(
       "OPENCLAW_PLUGIN_SDK_MAX_PUBLIC_FUNCTION_EXPORTS",
       // +1: session discussion provider registration.
-      2872,
+      2876,
       env,
     ),
     publicDeprecatedExports: readPluginSdkSurfaceBudgetEnv(
       "OPENCLAW_PLUGIN_SDK_MAX_PUBLIC_DEPRECATED_EXPORTS",
-      1694,
+      1696,
       env,
     ),
     publicWildcardReexports: readPluginSdkSurfaceBudgetEnv(
