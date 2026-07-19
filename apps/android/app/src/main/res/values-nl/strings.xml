@@ -513,6 +513,7 @@
     <string name="native_565339bc4d33d728" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"OK"</string>
     <string name="native_56a508f3f2bf424a" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Kan de installatiehandleiding niet openen."</string>
     <string name="native_56c41c606c44f3fc" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"vraag OpenClaw %1$s"</string>
+    <string name="native_56c4c3d30ceda56e" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Wait for Agents"</string>
     <string name="native_56ef8f20955f2564" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Adres"</string>
     <string name="native_5702e1d243eeb4e9" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Gepland werk dat op de Gateway is aangemaakt, verschijnt hier."</string>
     <string name="native_572739b05d138f8a" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"De nieuwste logchunk wordt weergegeven."</string>
@@ -524,7 +525,7 @@
     <string name="native_58268edca12a81a1" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Android kan een bestaande setupcode scannen of plakken, maar deze gateway biedt de app nog geen mogelijkheid om setupcodes te genereren. Genereer de QR/code op de gatewayhost met openclaw qr en scan deze vervolgens hier of plak de setupcode hieronder."</string>
     <string name="native_584162ac73e99ee6" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Canvasstatus"</string>
     <string name="native_5855b3ac2fcc1b3e" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Verbinding herstellen"</string>
-    <string name="native_58e909c0f4cc5723" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Afbeelding opslaan"</string>
+    <string name="native_58e909c0f4cc5723" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Afbeelding bewaren"</string>
     <string name="native_590b0003ccaad929" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Node %1$s"</string>
     <string name="native_59235e6ebfd03967" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Gateway-wachtwoord vereist"</string>
     <string name="native_592acaa91843913b" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Update Plan"</string>
@@ -1028,6 +1029,7 @@
     <string name="native_aed306fbb63c0c68" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Neem Android- en achtergrondpakketten op."</string>
     <string name="native_aedf1cf58372f943" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Je Gateway is klaar."</string>
     <string name="native_aeffb9182e3d7f3d" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Geactiveerd"</string>
+    <string name="native_af1f10e9b3af3250" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Structured Output"</string>
     <string name="native_af60a38d6b5866ce" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Dit duurt langer dan verwacht.\nControleer of de Gateway actief en bereikbaar is."</string>
     <string name="native_af7deaf2c81b107d" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Geen achtergrondtaken voor deze agent."</string>
     <string name="native_afb118fcb16c3727" formatted="false" tools:ignore="Typos,TypographyDashes,TypographyEllipsis">"Opnieuw verbinding maken"</string>
