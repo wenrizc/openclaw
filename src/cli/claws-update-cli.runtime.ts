@@ -41,8 +41,13 @@ function logClawUpdatePlanSummary(plan: ClawUpdatePlan, runtime: RuntimeEnv): vo
     `Add: ${plan.summary.added}; change: ${plan.summary.changed}; remove: ${plan.summary.removed}; release: ${plan.summary.released}; unchanged: ${plan.summary.unchanged}; manual: ${plan.summary.manual}`,
   );
   runtime.log(
-    `Capability changes: ${plan.summary.capabilityChanges}; escalations requiring distinct consent: ${plan.summary.capabilityEscalations}`,
+    `Capability changes: ${plan.summary.capabilityChanges}; escalations requiring explicit review: ${plan.summary.capabilityEscalations}`,
   );
+  if (plan.summary.capabilityEscalations > 0) {
+    runtime.log(
+      "Capability consent: the exact plan-integrity token binds every ! change disclosed below.",
+    );
+  }
   for (const change of plan.capabilityChanges) {
     const current = change.current?.summary ?? "unset";
     const desired = change.desired?.summary ?? "unset";

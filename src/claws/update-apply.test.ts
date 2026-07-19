@@ -122,6 +122,40 @@ describe("applyClawUpdatePlan", () => {
     expect(rebuildPlan).not.toHaveBeenCalled();
   });
 
+  it("rejects a capability disclosure that changed after consent", async () => {
+    const updatePlan = plan([]);
+    const changed = {
+      ...updatePlan,
+      capabilityChanges: [
+        {
+          kind: "mcpServer" as const,
+          id: "search",
+          path: "mcpServers.search",
+          action: "add" as const,
+          classification: "escalation" as const,
+          requiresDistinctConsent: true,
+          reason: "target adds an MCP execution surface",
+          desired: { summary: "stdio:npx search-server", digest: "sha256:capability" },
+        },
+      ],
+    };
+    const readInstall = vi.fn(() => install);
+
+    await expect(
+      applyClawUpdatePlan(
+        updatePlan,
+        { targetManifest: manifest, targetSource: source },
+        {
+          config: {},
+          ...consent(updatePlan),
+          rebuildPlan: vi.fn(async () => changed),
+          readInstall,
+        },
+      ),
+    ).rejects.toMatchObject({ code: "update_changed" });
+    expect(readInstall).not.toHaveBeenCalled();
+  });
+
   it("compare-writes the owned agent and advances root provenance", async () => {
     const currentAgent = { id: "worker", name: "Worker" };
     const currentDigest = `sha256:${createHash("sha256").update(stableStringify(currentAgent)).digest("hex")}`;

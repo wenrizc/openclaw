@@ -67,6 +67,7 @@ function comparablePlan(plan: ClawUpdatePlan): unknown {
     currentClaw: plan.currentClaw,
     targetClaw: plan.targetClaw,
     actions: plan.actions,
+    capabilityChanges: plan.capabilityChanges,
     blockers: plan.blockers,
   };
 }
