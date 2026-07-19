@@ -704,7 +704,10 @@ describe("claws cli", () => {
     await runCli(["claws", "update", "demo-agent", "--from", root, "--dry-run"]);
 
     const output = mocks.logs.join("\n");
-    expect(output).toContain("Capability changes: 1; escalations requiring distinct consent: 1");
+    expect(output).toContain("Capability changes: 1; escalations requiring explicit review: 1");
+    expect(output).toContain(
+      "Capability consent: the exact plan-integrity token binds every ! change disclosed below.",
+    );
     expect(output).toContain("! agent.sandbox.mode: non-main -> all (change)");
   });
 

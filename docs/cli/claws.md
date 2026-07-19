@@ -205,8 +205,12 @@ openclaw claws update incident-triage \
 
 The plan compares current provenance and live state with the target manifest.
 It reports agent, workspace, package, MCP, cron, and ownership changes,
-including capability escalations and blockers. This stage is read-only:
-`claws update` requires `--dry-run` and does not apply the plan.
+including capability escalations and blockers. Capability escalations have
+separate machine-readable records and `!` lines in human output; the eventual
+exact `planIntegrity` confirmation binds that disclosed set as well as ordinary
+content changes. Hosts may use the same records for a separate dialog or an
+aggregate multi-agent review. This stage is read-only: `claws update` requires
+`--dry-run` and does not apply the plan.
 
 ## Remove an installed Claw
 
