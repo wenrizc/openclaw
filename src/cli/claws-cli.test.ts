@@ -705,6 +705,7 @@ describe("claws cli", () => {
 
     const output = mocks.logs.join("\n");
     expect(output).toContain("Capability changes: 1; escalations requiring explicit review: 1");
+    expect(output).toContain("Plan integrity: sha256:update-plan");
     expect(output).toContain(
       "Capability consent: the exact plan-integrity token binds every ! change disclosed below.",
     );
