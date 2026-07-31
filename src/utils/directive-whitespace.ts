@@ -28,7 +28,7 @@ export function normalizeDirectiveWhitespace(text: string): string {
     cursor = span.end;
   }
   masked = `${masked}${text.slice(cursor)}`.replace(
-    /(?:(?:^|\n)(?:    |\t)[^\n]*)(?:\n(?:[ \t]*\n)*(?:    |\t)[^\n]*)*/gm,
+    /(?:(?:^|\n)(?:\x20{4}|\t)[^\n]*)(?:\n(?:[ \t]*\n)*(?:\x20{4}|\t)[^\n]*)*/gm,
     (block) => {
       blocks.push(block);
       return `${blockSentinel}${blocks.length - 1}${blockSentinel}`;
@@ -37,7 +37,7 @@ export function normalizeDirectiveWhitespace(text: string): string {
 
   const normalized = masked
     .replace(/\r\n/g, "\n")
-    .replace(/([^\s])[ \t]{2,}([^\s])/g, "$1 $2")
+    .replace(/([^\s])[\t\x20]{2,}([^\s])/g, "$1 $2")
     .replace(/^\n+/, "")
     .replace(/^[ \t](?=\S)/, "")
     .replace(/[ \t]+\n/g, "\n")

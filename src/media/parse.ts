@@ -542,7 +542,7 @@ export function splitMediaFromOutput(
       if (!segment.text.trim()) {
         continue;
       }
-      const hadTrailingNewline = /\n$/.test(segment.text);
+      const hadTrailingNewline = segment.text.endsWith("\n");
       const text = normalizeMediaVisibleWhitespace(segment.text);
       const endsWithCodeFence = /(?:^|\n) {0,3}(?:`{3,}|~{3,})[^\n]*$/.test(text);
       const isIndentedCode = /^(?: {4}|\t)/.test(text);
